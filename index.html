@@ -10,6 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -18,16 +22,12 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top py-3" style="transition: top 0.3s;">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3 shadow border-buttom border-3">
         <div class="container-fluid px-5">
-
-            <!-- BRAND + TOGGLER WRAPPER -->
             <div class="d-flex align-items-center w-100 justify-content-between">
-                <a class="navbar-brand text-light title-shrink" href="#" style="font-family: 'DM Serif Text';">
-                    <span class="display-3">Renaisance <span class="text-warning">Art</span></span>
+                <a class="navbar-brand text-light title-shrink" href="#home">
+                    <img src="images/logo.png" style="width: 3.5em;">
                 </a>
-
-                <!-- Toggler beside the name -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -60,22 +60,57 @@
     </nav>
 
 
-    <div class="container-fluid main-pic pb-5">
-        <div class="row">
-            <div class="col-lg-4 col-md-5 col-10 px-5 mx-5">
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container-fluid main-pic vh-100"
+            style="background: url('images/colosseum.jpg') center/cover no-repeat; backdrop-filter: blur(5px);">
+            <div
+                style="backdrop-filter: blur(3px); background-color: rgba(32, 32, 32, 0.5); position: absolute; inset: 0; z-index:-1;">
+            </div>
+            <div class="row align-items-center justify-content-center h-100 pb-md-5" style="margin-top: 5.5em;">
 
+                <div class="col-xxl-5 px-3 col-xl-6 col-lg-5 col-md-10 col-sm-12 order-2 order-md-2 order-lg-1">
+                    <div class="text-center text-lg-start home-text mt-3">
+                        <div class="display-3 text-light fw-bold mx-3"> <span class="display-1 fw-bold"
+                                style="color: #d59d2a">R</span>enaissance <span class="display-1 fw-bold"
+                                style="color: #d59d2a">A</span>rt</div>
+                        <div class=" text-light fw-light fs-6 fs-lg-6">
+                            <div class="mx-3 intro-text">
+                                The Renaissance (c.
+                                1400–1600) was a cultural revival in Italy, inspired by Ancient Greece and Rome. Artists
+                                and
+                                thinkers celebrated the human body and mind, while Florence led the movement, fueling
+                                demand for art
+                                in churches and homes.
+                            </div>
+                            <div class="container">
+                                <div class="row justify-content-center justify-content-lg-start">
+                                    <a class="view-gallery col-xxl-5 col-xl-4 col-lg-5 col-xs-6 view-my-work rounded-5 px-4 py-2 mt-3 text-white text-decoration-none text-center"
+                                        href="#Gallery">
+                                        View Gallery</a>
 
-                <div class="align-items-center text-light fs-5" style="padding-top: 15em;">The Renaissance (c.
-                    1400–1600) was a cultural revival in Italy, inspired by Ancient Greece and Rome. Artists and
-                    thinkers celebrated the human body and mind, while Florence led the movement, fueling demand for art
-                    in churches and homes.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-8 col-sm-8 text-center order-1 order-md-1 order-lg-2 picture1 p-5 shadow-lg rounded-0 home-pic"
+                    style="overflow: hidden; background-color: rgb(3, 11, 7); border: 5px solid rgb(88, 77, 2);">
+                    <img src="images/artwork4.jpg" class="img-fluid shadow-lg w-100 " alt="Responsive image">
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Artwork Gallery -->
     <section id="Gallery">
-        <div class="container-fluid bg-dark">
-            <div class="container mt-5">
-                <div class="row g-5 justify-content-center text-center" id="containerRow">
+        <div class="container-fluid bg-dark gallery-section pb-5">
+            <div class="display-3 text-light text-center" style="font-family: 'EB+Garamond';">
+                The <span class="display-1 fw-bold" style="color: #d59d2a">R</span>enaissance Artworks
+            </div>
+            <div class="container">
+                <div class="row g-3 justify-content-center text-center" id="containerRow">
 
                     <script src="data.js"></script>
 
@@ -84,22 +119,32 @@
 
                         for (var i = 0; i < people.length; i++) {
                             containerRow.innerHTML += `
-                        <div class="col-lg-3 col-md-5 col-10">
-                            <div class="card">
-                                <img src="` + people[i].picture + `" class="card-img-top" id="img-` + i + `">
-                                <div class="card-body">
-                                    <h5 class="card-title">` + people[i].title + `</h5>
-                                    <p><b>Artist: </b>` + people[i].artist + `</p>
-                                    <p><b>Year: </b>` + people[i].year + `</p>
-                                    <p><b>Medium: </b>` + people[i].medium + `</p>
-                                    <button class="btn btn-primary mt-4" onclick="openFull('img-` + i + `')">View Full Screen</button>
+                            <div class="col-xxl-4 col-md-5 col-11 mt-5 fade-on-scroll">
+                            <div class="card card-holder border-0 position-relative overflow-hidden">
+                                <img src="` + people[i].picture + `" class="card-img" alt="Artwork" id="artwork-` + i + `">
+                                
+
+                                <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50 explore-text">
+                                <h5 class="fw-bold" style="color: #d59d2a ">` + people[i].title + `</h5>
+
+                                <div class="small">
+                                    <b>Artist: </b>` + people[i].artist + `<br>
+                                    <b>Year: </b>` + people[i].year + `<br>
+                                    <b>Medium: </b>` + people[i].medium + `
+                                </div>
+
+                                <button class="btn btn-dark position-absolute top-0 end-0 m-2 px-3 rounded-5" onclick="openFull('artwork-` + i + `')">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+
                                 </div>
                             </div>
-                        </div>`;
+                            </div>`
+
                         }
 
-                        function openFull(imgid) {
-                            var img = document.getElementById(imgid);
+                        function openFull(artworkid) {
+                            var img = document.getElementById(artworkid);
                             if (img.requestFullscreen) {
                                 img.requestFullscreen();
                             } else if (img.webkitRequestFullscreen) {
@@ -109,15 +154,94 @@
                             }
                         }
                     </script>
-
                 </div>
             </div>
         </div>
     </section>
 
+
+    <!-- Sculpture Gallery -->
+         <section id="sculpture">
+        <div class="container-fluid "
+            style="background: url('images/colosseum.jpg') center/cover no-repeat; backdrop-filter: blur(5px);">
+            <div
+                style="backdrop-filter: blur(3px); background-color: rgba(32, 32, 32, 0.5); position: absolute; inset: 0; z-index:-1;">
+            </div>
+            <div class="display-3 text-light text-center" style="font-family: 'EB+Garamond';">
+                The <span class="display-1 fw-bold" style="color: #d59d2a">R</span>enaissance Scuptures
+            </div>
+            <div class="container">
+                <div class="row g-3 justify-content-center text-center" id="sculptureRow">
+
+                    <script src="data.js"></script>
+
+                   <script>
+                    var sculptureRow = document.getElementById("sculptureRow");
+
+                    for (var i = 0; i < sculpture.length; i++) {
+                        sculptureRow.innerHTML += `
+                        <div class="col-xxl-3 col-md-5 col-11 mt-5 fade-on-scroll">
+                            <div class="card card-holder border-0 position-relative overflow-hidden">
+                                <img src="` + sculpture[i].picture + `" class="card-img" alt="Sculpture" id="sculpture-` + i + `">
+
+                                <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50 explore-text">
+                                    <h5 class="fw-bold" style="color: #d59d2a">` + sculpture[i].title + `</h5>
+                                    <div class="small">
+                                        <b>Artist: </b>` + sculpture[i].artist + `<br>
+                                        <b>Year: </b>` + sculpture[i].year + `<br>
+                                        <b>Medium: </b>` + sculpture[i].medium + `
+                                    </div>
+
+                                    <button class="btn btn-dark position-absolute top-0 end-0 m-2 px-3 rounded-5" onclick="openFull('sculpture-` + i + `')">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>`
+                    }
+
+                        function openFull(sculptureid) {
+                            var img = document.getElementById(sculptureid);
+                            if (img.requestFullscreen) {
+                                img.requestFullscreen();
+                            } else if (img.webkitRequestFullscreen) {
+                                img.webkitRequestFullscreen();
+                            } else if (img.msRequestFullscreen) {
+                                img.msRequestFullscreen();
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        
+        <div class="container">
+                                <div class="row justify-content-center justify-content-lg-end">
+                                    <a class="view-gallery col-lg-3 col-5 view-my-work my-5 rounded-5 px-2 py-2 text-white text-decoration-none text-center"
+                                        href="#Gallery">
+                                        More details</a>
+
+                                </div>
+                            </div></div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script>
+
+        const faders = document.querySelectorAll('.fade-on-scroll');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        faders.forEach(fader => observer.observe(fader));
+    </script>
 </body>
 
 </html>

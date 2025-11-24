@@ -2,25 +2,20 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+     transition: all 0.3s ease;
  }
 
  html,
  body {
      height: 100vh;
+     overflow-y: auto;
      overflow-x: hidden;
      scroll-padding-top: 8em;
      scroll-behavior: smooth;
-     -ms-overflow-style: none;
-     scrollbar-width: none;
  }
-
- .main-pic {
-     background-image: url('images/artwork10.jpg');
-     width: 100%;
-     height: 100vh;
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center 25%;
+ .navbar {
+     background-color: rgba(3, 11, 7, 0.95);
+     backdrop-filter: blur(5px);
  }
 
  .nav-link {
@@ -35,4 +30,78 @@
  .title-shrink {
      word-wrap: break-word;
      white-space: normal;
+ }
+
+ .card-holder {
+     position: relative;
+     overflow: hidden;
+     cursor: pointer;
+     transition: transform 0.3s ease;
+ }
+
+ .card-holder img {
+     width: 100%;
+     height: auto;
+     transition: transform 0.5s ease;
+ }
+
+ .card-holder:hover img {
+     transform: scale(1.1);
+ }
+
+ .card-img-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     transition: all 0.4s ease;
+     opacity: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     padding: 1rem;
+ }
+
+ .card-holder:hover .card-img-overlay {
+     opacity: 1;
+ }
+
+ .card-holder:hover .explore-text {
+     background-color: rgba(0, 0, 0, 0.6);
+ }
+
+ .explore-text {
+     pointer-events: auto;
+ }
+
+ .view-gallery {
+     background-color: rgb(6, 23, 15);
+     font-family: 'Open Sans', sans-serif;
+ }
+ .fade-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.fade-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ @media (max-width: 990px) {
+     .home-pic {
+         margin-top: 7em;
+     }
+     .gallery-section{
+        padding-top: 20em;
+     }
+     .home-text{
+        background-color: rgb(33, 37, 41);
+        border-radius: 1em;
+        padding: 1em;
+        box-shadow: 0 0 10px 0 rgb(21, 21, 21);
+     }
+
  }
