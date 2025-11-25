@@ -7,22 +7,17 @@
     <title>Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3 shadow border-buttom border-3">
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 shadow border-buttom border-3">
         <div class="container-fluid px-5">
             <div class="d-flex align-items-center w-100 justify-content-between">
                 <a class="navbar-brand text-light title-shrink" href="#home">
@@ -48,7 +43,6 @@
                             <li><a class="dropdown-item" href="#">artwork</a></li>
                             <li><a class="dropdown-item" href="#">Sculpture</a></li>
                         </ul>
-
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2 bg-dark text-light" type="search" placeholder="Search"
@@ -59,7 +53,6 @@
         </div>
     </nav>
 
-
     <!-- Home Section -->
     <section id="home">
         <div class="container-fluid main-pic vh-100"
@@ -68,7 +61,6 @@
                 style="backdrop-filter: blur(3px); background-color: rgba(32, 32, 32, 0.5); position: absolute; inset: 0; z-index:-1;">
             </div>
             <div class="row align-items-center justify-content-center h-100 pb-md-5" style="margin-top: 5.5em;">
-
                 <div class="col-xxl-5 px-3 col-xl-6 col-lg-5 col-md-10 col-sm-12 order-2 order-md-2 order-lg-1">
                     <div class="text-center text-lg-start home-text mt-3">
                         <div class="display-3 text-light fw-bold mx-3"> <span class="display-1 fw-bold"
@@ -86,7 +78,7 @@
                             <div class="container">
                                 <div class="row justify-content-center justify-content-lg-start">
                                     <a class="view-gallery col-xxl-5 col-xl-4 col-lg-5 col-xs-6 view-my-work rounded-5 px-4 py-2 mt-3 text-white text-decoration-none text-center"
-                                        href="#Gallery">
+                                        href="view-gallery.html" target="_blank">
                                         View Gallery</a>
 
                                 </div>
@@ -120,11 +112,13 @@
                         for (var i = 0; i < people.length; i++) {
                             containerRow.innerHTML += `
                             <div class="col-xxl-4 col-md-5 col-11 mt-5 fade-on-scroll">
-                            <div class="card card-holder border-0 position-relative overflow-hidden">
+                            <div class="card p-1 bg-light card-holder border-0 position-relative overflow-hidden" style="height: 32em;">
+                                <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
+                                    <i class="fas fa-expand"></i>
+                                </button>
                                 <img src="` + people[i].picture + `" class="card-img" alt="Artwork" id="artwork-` + i + `">
-                                
-
-                                <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50 explore-text">
+  
+                                <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50">
                                 <h5 class="fw-bold" style="color: #d59d2a ">` + people[i].title + `</h5>
 
                                 <div class="small">
@@ -140,9 +134,7 @@
                                 </div>
                             </div>
                             </div>`
-
                         }
-
                         function openFull(artworkid) {
                             var img = document.getElementById(artworkid);
                             if (img.requestFullscreen) {
@@ -161,7 +153,7 @@
 
 
     <!-- Sculpture Gallery -->
-         <section id="sculpture">
+    <section id="sculpture">
         <div class="container-fluid "
             style="background: url('images/colosseum.jpg') center/cover no-repeat; backdrop-filter: blur(5px);">
             <div
@@ -175,13 +167,16 @@
 
                     <script src="data.js"></script>
 
-                   <script>
-                    var sculptureRow = document.getElementById("sculptureRow");
+                    <script>
+                        var sculptureRow = document.getElementById("sculptureRow");
 
-                    for (var i = 0; i < sculpture.length; i++) {
-                        sculptureRow.innerHTML += `
+                        for (var i = 0; i < sculpture.length; i++) {
+                            sculptureRow.innerHTML += `
                         <div class="col-xxl-3 col-md-5 col-11 mt-5 fade-on-scroll">
-                            <div class="card card-holder border-0 position-relative overflow-hidden">
+                            <div class="card card-holder p-1 bg-light border-0 position-relative overflow-hidden" style="height: 25em">
+                                 <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
+                                    <i class="fas fa-expand"></i>
+                                </button>
                                 <img src="` + sculpture[i].picture + `" class="card-img" alt="Sculpture" id="sculpture-` + i + `">
 
                                 <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50 explore-text">
@@ -198,7 +193,7 @@
                                 </div>
                             </div>
                         </div>`
-                    }
+                        }
 
                         function openFull(sculptureid) {
                             var img = document.getElementById(sculptureid);
@@ -213,15 +208,80 @@
                     </script>
                 </div>
             </div>
-        
-        <div class="container">
-                                <div class="row justify-content-center justify-content-lg-end">
-                                    <a class="view-gallery col-lg-3 col-5 view-my-work my-5 rounded-5 px-2 py-2 text-white text-decoration-none text-center"
-                                        href="#Gallery">
-                                        More details</a>
 
+            <div class="container">
+                <div class="row justify-content-center justify-content-lg-end">
+                    <a class="view-gallery col-lg-3 col-5 view-my-work my-5 rounded-5 px-2 py-2 text-white text-decoration-none text-center"
+                        href="view-gallery.html" target="_blank">
+                        More details</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section>
+        <div class="container-fluid z-1 bg-dark shadow py-5">
+
+            <div class="row">
+                <div class="col-12 text-center py-5 z-2">
+                    <div class="display-6 text-warning fw-bold"><i class="fa-solid fa-photo-film mx-auto"> </i> Artists
+                    </div>
+                    <small style="color: rgb(217, 217, 217);">Some of the famous Artist in Renaissance period</small>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class=" col-md-8 col-12 mx-auto">
+                    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+                        <div class="carousel-inner">
+
+                            </style>
+
+                            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="images/3.jpg" class="d-block w-100" alt="white beach">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/1.jpg" class="d-block w-100" alt="woman kayaking">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/2.jpg" class="d-block w-100" alt="A boat on the shore">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/4.jpg" class="d-block w-100" alt="woman swimming">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="images/5.jpg" class="d-block w-100" alt="white beach">
+                                    </div>
                                 </div>
-                            </div></div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

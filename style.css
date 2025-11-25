@@ -71,9 +71,9 @@
      background-color: rgba(0, 0, 0, 0.6);
  }
 
- .explore-text {
+ /* .explore-text {
      pointer-events: auto;
- }
+ } */
 
  .view-gallery {
      background-color: rgb(6, 23, 15);
